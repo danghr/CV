@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%.
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{ctexart} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Helvetica Neue}
+\setsansfont{Times New Roman}
+\setmonofont{Courier New}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Serif CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+% \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+\usepackage{fullpage}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{6pt} % Spacing around sections
+\titleformat{\subsection}{\large\raggedright}{ -}{0.2em}{} % Text formatting of subsections
+\titlespacing{\subsection}{0pt}{0pt}{3pt} % Spacing around subsections
+
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+
+\usepackage{fontawesome5}
+
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+\setitemize[1]{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+\setdescription{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+    {\LARGE 党浩然} \\
+    \faIcon{envelope} \  \href{mailto:danghr@outlook.com}{danghr@outlook.com} \  / \  \faIcon{desktop} \  \href{https://www.danghr.com}{danghr.com} \\
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION INFO
+%----------------------------------------------------------------------------------------
+
+\section{教育经历}
+
+    \begin{itemize}
+        \item \textbf{中国科学院计算技术研究所} \hfill 2022年9月至今\\
+        电子信息专业 \, 工程硕士在读 \hfill 中国 \, 北京 \\
+        \begin{small}
+            导师：范东睿（研究员）
+        \end{small}
+        \item \textbf{上海科技大学} \hfill 2018年9月至2022年6月\\
+        计算机科学与技术专业 \, 大学本科 \  工学学士        \hfill 中国 \, 上海 \\
+        \begin{small}
+            GPA：3.50/4.00 \quad 专业排名55/194（28.4\%） \quad
+            完整成绩单：\href{https://danghr.cn/ugtcn}{danghr.cn/ugtcn}
+        \end{small}
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH WORK
+%----------------------------------------------------------------------------------------
+
+\section{科研经历}
+
+    \subsection{科研成果}
+
+        \begin{itemize}
+            \item \underline{Haoran Dang}, Chongnan Ye, Yanpeng Hu, and Chundong Wang, "\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs}," in \textit{Proceedings of the 59th ACM/IEEE Design Automation Conference}, 2022, pp. 403–408. DOI: \href{https://doi.org/10.1145/3489517.3530470}{10.1145/3489517.3530470}.
+            \item Duo Wang, Mingyu Yan, Yihan Teng, Dengke Han, \underline{Haoran Dang}, Xiaochun Ye, and Dongrui Fan, “\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},” Accepted by \textit{the 42nd International Conference on Computer-aided Design}, 2023.
+        \end{itemize}
+
+    \subsection{研究经历}
+
+    \begin{itemize}
+        \item \textbf{图计算组} \quad 中国科学院计算技术研究所 \, 高通量计算机研究中心 \hfill 2021年12月至今 \\
+        {\small 课题组长：严明玉（副研究员）} \hfill 中国 \, 北京
+        \begin{small}
+            \begin{itemize}
+                \item 完成了一项图神经网络在多GPU架构下加速的研究，并以此获得优秀毕业设计奖项。
+            \end{itemize}
+        \end{small}
+    \end{itemize}
+
+    \begin{itemize}
+        \item \textbf{吐司实验室} \quad 上海科技大学 \, 信息科学与技术学院 \hfill 2021年7月至2022年1月 \\
+        {\small 实验室负责人：王春东（助理教授、研究员）} \hfill 中国 \, 上海
+        \begin{small}
+            \begin{itemize}
+                \item 负责NobLSM项目中数据库部分的设计与实现，以及性能测试、数据收集等工作。
+            \end{itemize}
+        \end{small}
+    \end{itemize}
+
+    \begin{itemize}
+        \item \textbf{态度研究实验室} \quad 上海科技大学 \, 创业与管理学院 \hfill 2020年9月至2021年9月 \\
+        {\small 实验室负责人：杨丽凤（副教授、研究员）} \hfill 中国 \, 上海
+        \begin{small}
+            \begin{itemize}
+                \item 参与了《信息科学技术伦理与道德》书籍出版准备，提供出版社比选建议，并参与了样章编写等工作。
+            \end{itemize}
+        \end{small}
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	TEACHING ASSISTANT
+%----------------------------------------------------------------------------------------
+
+\section{助教经历}
+
+    \begin{itemize}
+        \item \textbf{操作系统I}（本科） \hfill 上海科技大学 \quad 2021-2022学年秋学期
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGE AND STANDARDIZED TESTS
+%----------------------------------------------------------------------------------------
+
+\section{语言与标化考试成绩}
+
+    \begin{itemize}
+        \item \textbf{美国研究生入学考试（GRE）} \quad 328分 \hfill 2022年8月 \\
+        \begin{small}
+            文字推理：158 \quad 数量推理：170 \quad 分析性写作：4
+        \end{small}
+        % \item \textbf{托福网考（TOEFL iBT）} \quad 108分 \hfill 2020年12月 \\
+        % \begin{small}
+        %     阅读：28 \quad 听力：30 \quad 口语：21 \quad 写作：29
+        % \end{small}
+        \item \textbf{大学英语六级考试（CET-6）} \quad 572分 \hfill 2021年6月 \\
+        \begin{small}
+            听力：198 \quad 阅读：211 \quad 写作与翻译：163
+        \end{small}
+    \end{itemize}
+
+
+\newpage
+
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATES
+%----------------------------------------------------------------------------------------
+
+\section{证书与荣誉称号}
+
+    \begin{itemize}
+        \item \textbf{上海科技大学信息学院2022年优秀毕业设计} \hfill \quad 2022年6月
+        \item \textbf{上海科技大学2018级本科生产业实践优秀个人称号} \hfill \quad 2021年6月
+        \item \textbf{上海科技大学2019年本科生社会实践优秀个人称号} \hfill \quad 2019年11月
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	Voluntary Work
+%----------------------------------------------------------------------------------------
+
+\section{志愿与社会活动}
+
+    \subsection{校内}
+
+        \begin{itemize}
+            \item \textbf{2020年新生入学} \hfill 上海科技大学 \, 2020年9月
+                \begin{small} \begin{itemize}
+                    \item 负责研究生新生行李提取的引导工作。
+                \end{itemize} \end{small}
+            \item \textbf{2020年校园开放日} \hfill 上海科技大学 \, 2020年7月
+                \begin{small} \begin{itemize}
+                    \item 参加了设备检查及试卷下载工作。
+                \end{itemize} \end{small}
+            \item \textbf{2019年本科招生}  \hfill 上海科技大学 \, 2019年6月
+                \begin{small} \begin{itemize}
+                    \item 参加了北京招生组的咨询工作。
+                \end{itemize} \end{small}
+        \end{itemize}
+
+\end{document}

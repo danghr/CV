@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"latex-workshop.latex.recipe.default": "latexmk (xelatex)",
+		"latex-workshop.latex.autoClean.run": "onBuilt"
+	}
+}

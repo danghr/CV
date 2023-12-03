@@ -1,0 +1,223 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Plasmati Graduate CV
+% LaTeX Template
+% Version 1.0 (24/3/13)
+%
+% This template has been downloaded from:
+% http://www.LaTeXTemplates.com
+%
+% Original author:
+% Alessandro Plasmati (alessandro.plasmati@gmail.com)
+%
+% License:
+% CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
+%
+% Important note:
+% This template needs to be compiled with XeLaTeX.
+% The main document font is called Fontin and can be downloaded for free
+% from here: http://www.exljbris.com/fontin.html
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%----------------------------------------------------------------------------------------
+%	PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%----------------------------------------------------------------------------------------
+
+\documentclass[a4paper,10pt]{ctexart} % Default font size and paper size
+
+\usepackage{fontspec} % For loading fonts
+\defaultfontfeatures{Mapping=tex-text}
+\setmainfont{Helvetica Neue}
+\setsansfont{Times New Roman}
+\setmonofont{Courier New}
+\setCJKmainfont{Noto Sans CJK SC}
+\setCJKsansfont{Noto Serif CJK SC}
+\setCJKmonofont{Noto Sans Mono CJK SC}
+
+\usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
+
+\usepackage[usenames,dvipsnames]{xcolor} % Required for specifying custom colors
+
+% \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
+% To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
+\usepackage{fullpage}
+
+\usepackage{hyperref} % Required for adding links	and customizing them
+\definecolor{linkcolour}{rgb}{0,0.2,0.6} % Link color
+\hypersetup{colorlinks,breaklinks,urlcolor=linkcolour,linkcolor=linkcolour} % Set link colors throughout the document
+
+\usepackage{titlesec} % Used to customize the \section command
+\titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
+\titlespacing{\section}{0pt}{3pt}{6pt} % Spacing around sections
+\titleformat{\subsection}{\large\raggedright}{ -}{0.2em}{} % Text formatting of subsections
+\titlespacing{\subsection}{0pt}{0pt}{3pt} % Spacing around subsections
+
+\usepackage{makecell}
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{longtable}
+
+\usepackage{fontawesome5}
+
+\usepackage{enumitem}
+\setenumerate[1]{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+\setitemize[1]{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+\setdescription{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+
+\begin{document}
+
+\pagestyle{empty} % Removes page numbering
+
+\font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
+
+
+%----------------------------------------------------------------------------------------
+%	NAME AND CONTACT INFORMATION
+%----------------------------------------------------------------------------------------
+
+\begin{center}
+    {\LARGE Haoran Dang}（党浩然） \\
+    \faIcon{envelope} \  \href{mailto:danghr@outlook.com}{danghr@outlook.com} \  / \  \faIcon{desktop} \  \href{https://www.danghr.com}{danghr.com} \\
+\end{center}
+
+
+%----------------------------------------------------------------------------------------
+%	EDUCATION INFO
+%----------------------------------------------------------------------------------------
+
+\section{EDUCATION}
+
+    \begin{itemize}
+        \item \textbf{Institute of Computing Technology, Chinese Academy of Sciences} \hfill Sep 2022 - Present \\
+        Postgraduate Student in Electronic Information \hfill Beijing, China \\
+        \begin{small}
+            Supervisor: Prof. Dongrui Fan
+        \end{small}
+        \item \textbf{ShanghaiTech University} \hfill Sep 2018 - Jun 2022\\
+        Bachelor of Engineering in Computer Science and Technology \hfill Shanghai, China \\
+        \begin{small}
+            GPA: 3.50/4.00 \quad Rank in major: 55/194 (28.4\%) \quad
+            Full transcript: \href{https://danghr.cn/ugten}{danghr.cn/ugten}
+        \end{small}
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH WORK
+%----------------------------------------------------------------------------------------
+
+\section{RESEARCH}
+
+    \subsection{Papers \& Articles}
+
+        \begin{itemize}
+            \item \underline{Haoran Dang}, Chongnan Ye, Yanpeng Hu, and Chundong Wang, "\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs}," in \textit{Proceedings of the 59th ACM/IEEE Design Automation Conference}, 2022, pp. 403–408. DOI: \href{https://doi.org/10.1145/3489517.3530470}{10.1145/3489517.3530470}.
+            \item Duo Wang, Mingyu Yan, Yihan Teng, Dengke Han, \underline{Haoran Dang}, Xiaochun Ye, and Dongrui Fan, “\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},” Accepted by \textit{the 42nd International Conference on Computer-aided Design}, 2023.
+        \end{itemize}
+
+    \subsection{Research Experience}
+
+    \begin{itemize}
+        \item \textbf{Lab of Graph Intelligent Machine} \quad HTCRC, ICT, CAS \hfill Dec 2021 - Present \\
+        {\small Director: Prof. Mingyu Yan} \hfill Beijing, China
+        \begin{small}
+            \begin{itemize}
+                \item Finished a project to acceleration of GNN training on multi-GPU architecture as the undergraduate FYP.
+            \end{itemize}
+        \end{small}
+    \end{itemize}
+
+    \begin{itemize}
+        \item \textbf{Toast Lab} \quad SIST, ShanghaiTech \hfill Jul 2021 - Jan 2022 \\
+        {\small Director: Prof. Chundong Wang} \hfill Shanghai, China
+        \begin{small}
+            \begin{itemize}
+                \item Designed and implemented the database part in NobLSM and benchmarked the optimized system.
+            \end{itemize}
+        \end{small}
+    \end{itemize}
+
+    \begin{itemize}
+        \item \textbf{Attitude Research Lab} \quad SEM, ShanghaiTech \hfill Sep 2020 - Sep 2021 \\
+        {\small Director: Prof. Lifeng Yang} \hfill Shanghai, China
+        \begin{small}
+            \begin{itemize}
+                \item Participated in preparation of the book \textit{Ethics and Morality in Information Science and Technology}.
+            \end{itemize}
+        \end{small}
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	TEACHING
+%----------------------------------------------------------------------------------------
+
+\section{TEACHING}
+
+    \begin{itemize}
+        \item \textbf{Operating System I} (TA) \hfill ShanghaiTech \quad Fall, AY 2021-2022
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	LANGUAGE AND STANDARDIZED TESTS
+%----------------------------------------------------------------------------------------
+
+\section{LANGUAGE \& STANDARDIZED TESTS}
+
+    \begin{itemize}
+        \item \textbf{Graduate Record Examination (GRE)} \quad Score: 328 \hfill Aug 2022 \\
+        \begin{small}
+            Verbal Reasoning: 158 \quad Quantitative Reasoning: 170 \quad Analytical Writing: 4
+        \end{small}
+        % \item \textbf{TOEFL iBT} \quad Score: 108 \hfill Dec 2020 \\
+        % \begin{small}
+        %     Reading: 28 \quad Listening: 30 \quad Speaking: 21 \quad Writing: 29
+        % \end{small}
+        \item \textbf{College English Test Band 6 (CET-6)} \quad Score: 572 \hfill Jun: 2021 \\
+        \begin{small}
+            Listening: 198 \quad Reading: 211 \quad Writing \& Translation: 163
+        \end{small}
+    \end{itemize}
+
+
+\newpage
+
+
+%----------------------------------------------------------------------------------------
+%	CERTIFICATES
+%----------------------------------------------------------------------------------------
+
+\section{CERTIFICATES \& AWARDS}
+
+    \begin{itemize}
+        \item \textbf{2022 SIST Outstanding Thesis} {\small (for final year project)} \hfill ShanghaiTech \quad Jun 2022
+        \item \textbf{Excellent Individual of Industrial Practice in Class of 2018} \hfill ShanghaiTech \quad Jun 2021
+        \item \textbf{Excellent Individual of Social Practice in 2019} \hfill ShanghaiTech \quad Nov 2019
+    \end{itemize}
+
+
+%----------------------------------------------------------------------------------------
+%	Service
+%----------------------------------------------------------------------------------------
+
+\section{VOLUNTARY SERVICE}
+
+    \subsection{On-campus}
+
+        \begin{itemize}
+            \item \textbf{2020 Freshmen Enrollment} \hfill ShanghaiTech \quad Sep 2020
+                \begin{small} \begin{itemize}
+                    \item Guidance in baggage claim of postgraduate students.
+                \end{itemize} \end{small}
+            \item \textbf{2020 Campus Opening Day} \hfill ShanghaiTech \quad Jul 2020
+                \begin{small} \begin{itemize}
+                    \item Participated device check and exam download.
+                \end{itemize} \end{small}
+            \item \textbf{2019 Undergraduate Admission} \hfill ShanghaiTech \quad Jun 2019
+                \begin{small} \begin{itemize}
+                    \item Participated in admission consultation in Beijing.
+                \end{itemize} \end{small}
+        \end{itemize}
+
+\end{document}
