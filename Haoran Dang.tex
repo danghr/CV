@@ -29,7 +29,7 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Helvetica Neue}
 \setsansfont{Times New Roman}
-\setmonofont{Courier New}
+\setmonofont{Courier}
 \setCJKmainfont{Noto Sans CJK SC}
 \setCJKsansfont{Noto Serif CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
@@ -40,7 +40,8 @@
 
 % \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
 % To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
-\usepackage{fullpage}
+% \usepackage{fullpage}
+\usepackage[hmargin=0.5in, vmargin=0.5in]{geometry}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
 \definecolor{linkcolour}{rgb}{0,0,0} % Link color
@@ -49,8 +50,8 @@
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{6pt} % Spacing around sections
-\titleformat{\subsection}{\large\raggedright}{ -}{0.2em}{} % Text formatting of subsections
-\titlespacing{\subsection}{0pt}{0pt}{3pt} % Spacing around subsections
+\titleformat{\subsection}{\large\raggedright}{ -}{0pt}{} % Text formatting of subsections
+\titlespacing{\subsection}{0pt}{0pt}{0pt} % Spacing around subsections
 
 \usepackage{makecell}
 \usepackage{array}
@@ -70,151 +71,156 @@
 
 \font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
 
+% Sections that should not be cut in two pages
+\newenvironment{keepsection}{\par\noindent\minipage{\textwidth}}{\endminipage\par}
+
+% Tilde in date range
+\newcommand{\datetlide}{\textasciitilde \ }
+
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
+\begin{keepsection}
 \begin{center}
     {\LARGE Haoran Dang}（党浩然） \\
     \faIcon{envelope} \  \href{mailto:danghr@outlook.com}{danghr@outlook.com} \  / \  \faIcon{desktop} \  \href{https://www.danghr.com}{danghr.com} \\
 \end{center}
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION INFO
+%	EDUCATION
 %----------------------------------------------------------------------------------------
+\begin{keepsection}
 
 \section{EDUCATION}
 
+\begin{itemize}
+    \item \textbf{Institute of Computing Technology, Chinese Academy of Sciences} \hfill 2022-09 \datetlide Present \\
+    M.Eng. Student in Electronic Information \quad {\small Supervisor: Prof. Dongrui Fan \quad GPA: 3.81/4} \hfill Beijing, China \\
+    {\small Also a student of University of Chinese Academy of Sciences, where the degree is to be conferred.}
+    \item \textbf{ShanghaiTech University} \hfill 2018-09 \datetlide 2022-06 \\
+    B.Eng. in Computer Science and Technology \quad {\small GPA: 3.50/4 \quad Rank in major: 55/194 (28.4\%)} \hfill Shanghai, China
+\end{itemize}
+
+\end{keepsection}
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH & PROJECTS
+%----------------------------------------------------------------------------------------
+
+\begin{keepsection}
+\section{RESEARCH \& PROJECTS}
+
+\subsection{Publications}
     \begin{itemize}
-        \item \textbf{Institute of Computing Technology, Chinese Academy of Sciences} \hfill Sep 2022 - Present \\
-        M.Eng Student in Electronic Information \hfill Beijing, China \\
-        \begin{small}
-            Supervisor: Prof. Dongrui Fan \quad
-            GPA: 3.81/4 \quad
-        \end{small}
-        \item \textbf{ShanghaiTech University} \hfill Sep 2018 - Jun 2022\\
-        B.Eng in Computer Science and Technology \hfill Shanghai, China \\
-        \begin{small}
-            GPA: 3.50/4 \quad Rank in major: 55/194 (28.4\%) \quad
-       \end{small}
+        \item \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' accepted by \textit{Euro-Par 2024}.
+        \item \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
+        \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}.
     \end{itemize}
+\end{keepsection}
 
-
-%----------------------------------------------------------------------------------------
-%	RESEARCH WORK
-%----------------------------------------------------------------------------------------
-
-\section{RESEARCH}
-
-    \subsection{Papers \& Articles}
-
+\begin{keepsection}
+\subsection{Research}
+\begin{itemize}
+    \item \textbf{Lab of Graph Intelligent Machine} (GIMLab) \quad HTCRC, ICT, CAS \hfill 2021-12 \datetlide Present \\
+    {\small Director: Assoc. Prof. Mingyu Yan} \hfill Beijing, China
+    \begin{small}
         \begin{itemize}
-            \item \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' to be published in \textit{Euro-Par 2024}.
-            \item \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}. DOI: \href{https://doi.org/10.1145/3489517.3530470}{10.1145/3489517.3530470}.
-            \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}. DOI: \href{https://doi.org/10.1109/ICCAD57390.2023.10323840}{10.1109/ICCAD57390.2023.10323840}
+            \item Conducted research to accelerate GNN inference on multi-GPU platforms, developed and implemented an optimized GPU dataloading method based on partition, achieving a 59.9\% performance improvement over baseline. (cf. GDL-GNN)
+            \item Developed an undergraduate FYP on optimizing GNN training, halving training times by implementing a multithreaded data loader across various GPUs. Awarded the SIST Outstanding Thesis.
         \end{itemize}
+    \end{small}
 
-    \subsection{Research Experience}
+    \item \textbf{Toast Lab} \quad SIST, ShanghaiTech \hfill 2021-07 \datetlide 2022-02 \\
+    {\small Director: Assist. Prof. Chundong Wang} \hfill Shanghai, China
+    \begin{small}
+        \begin{itemize}
+            \item Designed and implemented NobLSM's database component, using a modified ext4 interface to delay file deletions and minimize costly \texttt{sync}s. Demonstrated enhanced performance via benchmarking against SOTA LSM-trees. (cf. NobLSM)
+        \end{itemize}
+    \end{small}
 
-    \begin{itemize}
-        \item \textbf{Lab of Graph Intelligent Machine} \quad HTCRC, SKLP, ICT, CAS \hfill Dec 2021 - Present \\
-        {\small Director: Assoc. Prof. Mingyu Yan} \hfill Beijing, China
-        \begin{small}
-            \begin{itemize}
-                \item Conducted research to accelerate GNN inference on multi-GPU platforms, developed and implemented an optimized GPU dataloading method based on partition, achieving a 59.9\% performance improvement over baseline. (cf. GDL-GNN)
-                \item Developed an undergraduate FYP on optimizing GNN training, halving training times by implementing a multithreaded data loader across various GPUs. Awarded the SIST Outstanding Thesis.
-            \end{itemize}
-        \end{small}
+    \item \textbf{Attitude Research Lab} (ARLab) \quad SEM, ShanghaiTech \hfill 2020-09 \datetlide 2021-09 \\
+    {\small Director: Assoc. Prof. Lifeng Yang} \hfill Shanghai, China
+    \begin{small}
+        \begin{itemize}
+            \item Participated in preparation of the book \textit{Ethics and Morality in Information Science and Technology}. Provided suggestions on selecting publishing houses and participated in writing example chapters.
+        \end{itemize}
+    \end{small}
+\end{itemize}
+\end{keepsection}
 
-        \item \textbf{Toast Lab} \quad SIST, ShanghaiTech \hfill Jul 2021 - Feb 2022 \\
-        {\small Director: Assist. Prof. Chundong Wang} \hfill Shanghai, China
-        \begin{small}
-            \begin{itemize}
-                \item Designed and implemented NobLSM's database component, using a modified ext4 interface to delay file deletions and minimize costly \textbf{\texttt{sync}}s. Demonstrated enhanced performance via benchmarking against SOTA LSM-trees. (cf. NobLSM)
-            \end{itemize}
-        \end{small}
+% \begin{keepsection}
+% \subsection{Projects}
+% \begin{itemize}
+%     \item \textbf{``One Student One Chip'' Project}
+% \end{itemize}
+% \end{keepsection}
 
-        \item \textbf{Attitude Research Lab} \quad SEM, ShanghaiTech \hfill Sep 2020 - Sep 2021 \\
-        {\small Director: Assoc. Prof. Lifeng Yang} \hfill Shanghai, China
-        \begin{small}
-            \begin{itemize}
-                \item Participated in preparation of the book \textit{Ethics and Morality in Information Science and Technology}. Provided suggestions on publishing houses and 
-            \end{itemize}
-        \end{small}
-    \end{itemize}
-
-
-%----------------------------------------------------------------------------------------
-%	TEACHING
-%----------------------------------------------------------------------------------------
-
-\section{TEACHING}
+\begin{keepsection}
+\subsection{TEACHING}
 
     \begin{itemize}
-        \item \textbf{Operating System I} (TA) \hfill ShanghaiTech \quad Fall, AY 2021-2022
+        \item \textbf{Operating System I} (TA) \hfill ShanghaiTech \quad Fall, AY 2021 \datetlide 2022
     \end{itemize}
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
-%	LANGUAGE AND STANDARDIZED TESTS
+%	SKILLS
 %----------------------------------------------------------------------------------------
 
-\section{LANGUAGE \& STANDARDIZED TESTS}
+\begin{keepsection}
 
-    \begin{itemize}
-        \item \textbf{TOEFL iBT} \quad Score: 107 \hfill Apr 2024 \\
-        \begin{small}
-            Reading: 29 \quad Listening: 27 \quad Speaking: 23 \quad Writing: 28
-        \end{small}
-        \item \textbf{GRE General Test} \quad Score: 328 \hfill Aug 2022 \\
-        \begin{small}
-            Verbal Reasoning: 158 \quad Quantitative Reasoning: 170 \quad Analytical Writing: 4
-        \end{small}
-        \item \textbf{College English Test Band 6 (CET-6)} \quad Score: 572 \hfill Jun 2021 \\
-        \begin{small}
-            Listening: 198 \quad Reading: 211 \quad Writing \& Translation: 163
-        \end{small}
-    \end{itemize}
+\section{SKILLS}
+\begin{itemize}
+    \item \textbf{Programming Languages}: C/C++, Python, Shell, Verilog
+    \item \textbf{Tools \& Frameworks}: PyTorch, \LaTeX, Jekyll
+    \item \textbf{Languages}: Mandarin Chinese (native), English (fluent)
+        \begin{itemize}
+            \item \textbf{TOEFL iBT} \quad Score: 107 {\small (Reading: 29, Listening: 27, Speaking: 23, Writing: 28)} \hfill 2024-04
+            \item \textbf{GRE General Test} \quad Score: 328 {\small (Verbal: 158, Quantitative: 170, Analytical Writing: 4)} \hfill 2022-08
+            \item \textbf{College English Test Band 6} \quad Score: 572 {\small (Listening: 198, Reading: 211, Writing: 163)} \hfill 2021-06
+        \end{itemize}
+\end{itemize}
+
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
 %	CERTIFICATES
 %----------------------------------------------------------------------------------------
 
-\section{CERTIFICATES \& AWARDS}
+\begin{keepsection}
 
-    \begin{itemize}
-        \item \textbf{2022 SIST Outstanding Thesis} {\small (for final year project)} \hfill ShanghaiTech \quad Jun 2022
-        \item \textbf{Excellent Individual of Industrial Practice in Class of 2018} \hfill ShanghaiTech \quad Jun 2021
-        \item \textbf{Excellent Individual of Social Practice in 2019} \hfill ShanghaiTech \quad Nov 2019
-    \end{itemize}
+\section{CERTIFICATES \& AWARDS}
+\begin{itemize}
+    \item \textbf{2022 SIST Outstanding Thesis} {\small (for final year project)} \hfill ShanghaiTech \quad 2022-06
+    \item \textbf{Excellent Individual of Industrial Practice in Class of 2018} \hfill ShanghaiTech \quad 2021-06
+    \item \textbf{Excellent Individual of Social Practice in 2019} \hfill ShanghaiTech \quad 2019-11
+\end{itemize}
+
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
 %	Service
 %----------------------------------------------------------------------------------------
 
-\section{VOLUNTARY SERVICE}
+\begin{keepsection}
 
-    \begin{itemize}
-        \item \textbf{"Sunflower Activity" - Haidian Hospital Volunteers} \hfill ICT, CAS \quad Dec 2023
-            \begin{small} \begin{itemize}
-                \item Assisted the Service Center in answering patients' questions and printing pathology reports.
-            \end{itemize} \end{small}
-        \item \textbf{2020 Freshmen Enrollment} \hfill ShanghaiTech \quad Sep 2020
-            \begin{small} \begin{itemize}
-                \item Guidance in baggage claim of postgraduate students.
-            \end{itemize} \end{small}
-        \item \textbf{2020 Campus Opening Day} \hfill ShanghaiTech \quad Jul 2020
-            \begin{small} \begin{itemize}
-                \item Participated device check and exam download.
-            \end{itemize} \end{small}
-        \item \textbf{2019 Undergraduate Admission} \hfill ShanghaiTech \quad Jun 2019
-            \begin{small} \begin{itemize}
-                \item Participated in admission consultation in Beijing.
-            \end{itemize} \end{small}
-    \end{itemize}
+\section{VOLUNTARY SERVICE}
+\begin{itemize}
+    \item \textbf{20th Public Science Day of ICT, CAS} \quad {\small Remote camera operator.} \hfill ICT, CAS \quad 2024-05
+    \item \textbf{``Sunflower Activity'' - Haidian Hospital Volunteers} \quad {\small Assistant in Service Center} \hfill ICT, CAS \quad 2023-12
+    \item \textbf{2020 Freshmen Enrollment} \quad {\small Guidance in baggage claim of postgraduate students.} \hfill ShanghaiTech \quad 2020-09
+    \item \textbf{2020 Campus Opening Day} \quad {\small Participated in device check and exam download.} \hfill ShanghaiTech \quad 2020-07
+    \item \textbf{2019 Admission Consultation} \quad {\small Participated in admission consultation in Beijing.} \hfill ShanghaiTech \quad 2019-06
+\end{itemize}
+
+\end{keepsection}
 
 \end{document}
