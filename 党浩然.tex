@@ -11,7 +11,7 @@
 %
 % License:
 % CC BY-NC-SA 3.0 (http://creativecommons.org/licenses/by-nc-sa/3.0/)
-%.
+%
 % Important note:
 % This template needs to be compiled with XeLaTeX.
 % The main document font is called Fontin and can be downloaded for free
@@ -29,7 +29,7 @@
 \defaultfontfeatures{Mapping=tex-text}
 \setmainfont{Helvetica Neue}
 \setsansfont{Times New Roman}
-\setmonofont{Courier New}
+\setmonofont{Courier}
 \setCJKmainfont{Noto Sans CJK SC}
 \setCJKsansfont{Noto Serif CJK SC}
 \setCJKmonofont{Noto Sans Mono CJK SC}
@@ -40,7 +40,8 @@
 
 % \usepackage[big]{layaureo} % Margin formatting of the A4 page, an alternative to layaureo can be \usepackage{fullpage}
 % To reduce the height of the top margin uncomment: \addtolength{\voffset}{-1.3cm}
-\usepackage{fullpage}
+% \usepackage{fullpage}
+\usepackage[hmargin=0.5in, vmargin=0.5in]{geometry}
 
 \usepackage{hyperref} % Required for adding links	and customizing them
 \definecolor{linkcolour}{rgb}{0,0,0} % Link color
@@ -49,7 +50,7 @@
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
 \titlespacing{\section}{0pt}{3pt}{6pt} % Spacing around sections
-\titleformat{\subsection}{\large\raggedright}{ -}{0.2em}{} % Text formatting of subsections
+\titleformat{\subsection}{\large\raggedright}{ -}{0pt}{} % Text formatting of subsections
 \titlespacing{\subsection}{0pt}{0pt}{3pt} % Spacing around subsections
 
 \usepackage{makecell}
@@ -70,158 +71,155 @@
 
 \font\fb=''[cmr10]'' % Change the font of the \LaTeX command under the skills section
 
+% Sections that should not be cut in two pages
+\newenvironment{keepsection}{\par\noindent\minipage{\textwidth}}{\endminipage\par}
+
+% Tilde in date range
+\newcommand{\datetlide}{\textasciitilde \ }
+
 
 %----------------------------------------------------------------------------------------
 %	NAME AND CONTACT INFORMATION
 %----------------------------------------------------------------------------------------
 
+\begin{keepsection}
 \begin{center}
     {\LARGE 党浩然} \\
     \faIcon{envelope} \  \href{mailto:danghr@outlook.com}{danghr@outlook.com} \  / \  \faIcon{desktop} \  \href{https://www.danghr.com}{danghr.com} \\
 \end{center}
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
-%	EDUCATION INFO
+%	EDUCATION
+%----------------------------------------------------------------------------------------
+\begin{keepsection}
+
+\section{教育背景}
+
+\begin{itemize}
+    \item \textbf{中国科学院计算技术研究所} \hfill 2022-09至今 \\
+    电子信息专业 \, 工程硕士在读 \quad {\small 导师：范东睿（研究员） \quad GPA：3.81/4} \hfill 中国 \, 北京 \\
+    {\small 学籍属于中国科学院大学，学历学位均由该校授予。}
+    \item \textbf{上海科技大学} \hfill 2018-09 \datetlide 2022-06 \\
+    计算机科学与技术专业 \, 工学学士 \quad {\small GPA：3.50/4 \quad 专业排名：55/194（28.4\%）} \hfill 中国 \, 上海
+\end{itemize}
+
+\end{keepsection}
+
+
+%----------------------------------------------------------------------------------------
+%	RESEARCH & PROJECTS
 %----------------------------------------------------------------------------------------
 
-\section{教育经历}
+\begin{keepsection}
+\section{科研和项目经历}
 
+\subsection{发表论文}
     \begin{itemize}
-        \item \textbf{中国科学院计算技术研究所} \hfill 2022年9月至今\\
-        电子信息专业 \, 工程硕士在读 \hfill 中国 \, 北京 \\
-        \begin{small}
-            导师：范东睿（研究员） \\
-            GPA：3.81/4 \quad
-            成绩单：\href{https://www.danghr.com/mtzh}{danghr.com/mtzh}
-        \end{small}
-        \item \textbf{上海科技大学} \hfill 2018年9月至2022年6月\\
-        计算机科学与技术专业 \, 工学学士        \hfill 中国 \, 上海 \\
-        \begin{small}
-            GPA：3.50/4 \quad 专业排名：55/194（28.4\%） \quad
-            成绩单：\href{https://www.danghr.com/ugtzh}{danghr.com/ugtzh}
-        \end{small}
+        \item \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' accepted by \textit{Euro-Par 2024}.
+        \item \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
+        \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}.
     \end{itemize}
+\end{keepsection}
 
-
-%----------------------------------------------------------------------------------------
-%	RESEARCH WORK
-%----------------------------------------------------------------------------------------
-
-\section{科研经历}
-
-    \subsection{科研成果}
-
+\begin{keepsection}
+\subsection{研究经历}
+\begin{itemize}
+    \item \textbf{图计算组} \quad 中国科学院计算技术研究所 \, 高通量计算机研究中心 \hfill 2021-12至今 \\
+    {\small 课题组长：严明玉（副研究员）} \hfill 中国 \, 北京
+    \begin{small}
         \begin{itemize}
-            \item \underline{H Dang}, C Ye, Y Hu, and C Wang, "\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs}," \textit{ACM/IEEE Design Automation Conference (DAC)}, 2022. DOI: \href{https://doi.org/10.1145/3489517.3530470}{10.1145/3489517.3530470}.
-            \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, “\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},” \textit{International Conference on Computer Aided Design (ICCAD)}, 2023. DOI: \href{https://doi.org/10.1109/ICCAD57390.2023.10323840}{10.1109/ICCAD57390.2023.10323840}
+            \item 针对多GPU平台上的GNN推理加速问题进行研究，提出并实现了一套基于分区的优化GPU数据加载方法，性能比基线提高了59.9\%。（参见GDL-GNN）
+            \item 完成了一项图神经网络在多GPU架构下训练加速的研究，通过多线程数据加载方法将训练时间减半。此工作获得了上科大信息学院优秀本科毕业设计奖项。
         \end{itemize}
+    \end{small}
 
-    \subsection{研究经历}
+    \item \textbf{吐司实验室} \quad 上海科技大学 \, 信息科学与技术学院 \hfill 2021-07 \datetlide 2022-02 \\
+    {\small 实验室PI：王春东（助理教授、研究员）} \hfill 中国 \, 上海
+    \begin{small}
+        \begin{itemize}
+            \item 负责NobLSM项目中数据库部分的设计与实现，借助一版经过修改的ext4文件系统推迟旧数据的删除，以在保证数据一致性的前提下减少文件系统~\texttt{sync}~。完成该项目的性能测试工作，结果表明其性能优于SOTA LSM树数据库。（参见NobLSM）
+        \end{itemize}
+    \end{small}
+
+    \item \textbf{态度研究实验室} \quad 上海科技大学 \, 创业与管理学院 \hfill 2020-09 \datetlide 2021-09 \\
+    {\small 实验室PI：杨丽凤（副教授、研究员）} \hfill 中国 \, 上海
+    \begin{small}
+        \begin{itemize}
+            \item 参与书籍《信息科学技术伦理与道德》的出版准备工作。提供出版社比选建议，并参与了样章编写。
+        \end{itemize}
+    \end{small}
+\end{itemize}
+\end{keepsection}
+
+% \begin{keepsection}
+% \subsection{Projects}
+% \begin{itemize}
+%     \item \textbf{``One Student One Chip'' Project}
+% \end{itemize}
+% \end{keepsection}
+
+\begin{keepsection}
+\subsection{教学经历}
 
     \begin{itemize}
-        \item \textbf{图计算组} \quad 中国科学院计算技术研究所 \, 高通量计算机研究中心 \hfill 2021年12月至今 \\
-        {\small 课题组长：严明玉（副研究员）} \hfill 中国 \, 北京
-        \begin{small}
-            \begin{itemize}
-                \item 完成了一项图神经网络在多GPU架构下加速的研究，并以此获得优秀毕业设计奖项。
-            \end{itemize}
-        \end{small}
+        \item \textbf{操作系统I}（助教） \hfill 上海科技大学 \quad 2021-2022学年秋学期
     \end{itemize}
-
-    \begin{itemize}
-        \item \textbf{吐司实验室} \quad 上海科技大学 \, 信息科学与技术学院 \hfill 2021年7月至2022年1月 \\
-        {\small 实验室负责人：王春东（助理教授、研究员）} \hfill 中国 \, 上海
-        \begin{small}
-            \begin{itemize}
-                \item 负责NobLSM项目中数据库部分的设计与实现，以及性能测试、数据收集等工作。
-            \end{itemize}
-        \end{small}
-    \end{itemize}
-
-    \begin{itemize}
-        \item \textbf{态度研究实验室} \quad 上海科技大学 \, 创业与管理学院 \hfill 2020年9月至2021年9月 \\
-        {\small 实验室负责人：杨丽凤（副教授、研究员）} \hfill 中国 \, 上海
-        \begin{small}
-            \begin{itemize}
-                \item 参与了《信息科学技术伦理与道德》书籍出版准备，提供出版社比选建议，并参与了样章编写等工作。
-            \end{itemize}
-        \end{small}
-    \end{itemize}
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
-%	TEACHING ASSISTANT
+%	SKILLS
 %----------------------------------------------------------------------------------------
 
-\section{助教经历}
+\begin{keepsection}
 
-    \begin{itemize}
-        \item \textbf{操作系统I}（本科） \hfill 上海科技大学 \quad 2021-2022学年秋学期
-    \end{itemize}
+\section{技能}
+\begin{itemize}
+    \item \textbf{编程语言和框架：} 熟练使用C/C++、Python，熟悉PyTorch、\LaTeX，了解Verilog、Shell脚本
+    \item \textbf{语言：} 中文普通话（母语）、英语（流利）
+        \begin{itemize}
+            \item \textbf{托福网考} \quad 得分：107 {\small （阅读：29 \quad 听力：27 \quad 口语：23 \quad 写作：28）} \hfill 2024-04
+            \item \textbf{GRE普通考试} \quad 得分：328 {\small （文字推理：158 \quad 数量推理：170 \quad 分析性写作：4）} \hfill 2022-08
+            \item \textbf{大学英语六级考试} \quad Score: 572 {\small （听力：198 \quad 阅读：211 \quad 写作：163）} \hfill 2021-06
+        \end{itemize}
+\end{itemize}
 
-
-%----------------------------------------------------------------------------------------
-%	LANGUAGE AND STANDARDIZED TESTS
-%----------------------------------------------------------------------------------------
-
-\section{语言与标化考试成绩}
-
-    \begin{itemize}
-        \item \textbf{美国研究生入学考试（GRE）} \quad 328分 \hfill 2022年8月 \\
-        \begin{small}
-            文字推理：158 \quad 数量推理：170 \quad 分析性写作：4
-        \end{small}
-        % \item \textbf{托福网考（TOEFL iBT）} \quad 108分 \hfill 2020年12月 \\
-        % \begin{small}
-        %     阅读：28 \quad 听力：30 \quad 口语：21 \quad 写作：29
-        % \end{small}
-        \item \textbf{大学英语六级考试（CET-6）} \quad 572分 \hfill 2021年6月 \\
-        \begin{small}
-            听力：198 \quad 阅读：211 \quad 写作与翻译：163
-        \end{small}
-    \end{itemize}
-
-
-\newpage
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
 %	CERTIFICATES
 %----------------------------------------------------------------------------------------
 
-\section{证书与荣誉称号}
+\begin{keepsection}
 
-    \begin{itemize}
-        \item \textbf{上海科技大学信息学院2022年优秀毕业设计} \hfill \quad 2022年6月
-        \item \textbf{上海科技大学2018级本科生产业实践优秀个人称号} \hfill \quad 2021年6月
-        \item \textbf{上海科技大学2019年本科生社会实践优秀个人称号} \hfill \quad 2019年11月
-    \end{itemize}
+\section{证书和荣誉称号}
+\begin{itemize}
+    \item \textbf{上海科技大学信息学院2022年优秀毕业设计} \hfill \quad 2022-06
+    \item \textbf{上海科技大学2018级本科生产业实践优秀个人称号} \hfill \quad 2021-06
+    \item \textbf{上海科技大学2019年本科生社会实践优秀个人称号} \hfill \quad 2019-11
+\end{itemize}
+
+\end{keepsection}
 
 
 %----------------------------------------------------------------------------------------
-%	Voluntary Work
+%	Service
 %----------------------------------------------------------------------------------------
 
-\section{志愿与社会活动}
+\begin{keepsection}
 
-    \begin{itemize}
-        \item \textbf{“向阳花活动”—海淀医院志愿者} \hfill 中科院计算所 \quad 2023年12月
-            \begin{small} \begin{itemize}
-                \item 协助医院服务中心解答患者问题、打印病理报告。
-            \end{itemize} \end{small}
-        \item \textbf{2020年新生入学} \hfill 上海科技大学 \quad 2020年9月
-            \begin{small} \begin{itemize}
-                \item 负责研究生新生行李提取的引导工作。
-            \end{itemize} \end{small}
-        \item \textbf{2020年校园开放日} \hfill 上海科技大学 \quad 2020年7月
-            \begin{small} \begin{itemize}
-                \item 参加了设备检查及试卷下载工作。
-            \end{itemize} \end{small}
-        \item \textbf{2019年本科招生}  \hfill 上海科技大学 \quad 2019年6月
-            \begin{small} \begin{itemize}
-                \item 参加了北京招生组的咨询工作。
-            \end{itemize} \end{small}
-    \end{itemize}
+\section{志愿服务}
+\begin{itemize}
+    \item \textbf{中科院计算所第20届公众科学日} \quad {\small 担任外场摄像工作。} \hfill 中科院计算所 \quad 2024-05
+    \item \textbf{“向阳花活动”—海淀医院志愿者} \quad {\small 协助服务中心解答患者问题。} \hfill 中国科学院计算技术研究所 \quad 2023-12
+    \item \textbf{2020年新生入学} \quad {\small 研究生新生行李提取引导。} \hfill 上海科技大学 \quad 2020-09
+    \item \textbf{2020年校园开放日} \quad {\small 参加设备检查及试卷下载工作。} \hfill 上海科技大学 \quad 2020-07
+    \item \textbf{2019年本科招生} \quad {\small 参加了北京招生组的咨询宣传工作。} \hfill 上海科技大学 \quad 2019-06
+\end{itemize}
+
+\end{keepsection}
 
 \end{document}
