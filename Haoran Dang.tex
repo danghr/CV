@@ -30,9 +30,21 @@
 \setmainfont{Helvetica Neue}
 \setsansfont{Times New Roman}
 \setmonofont{Courier}
-\setCJKmainfont{Noto Sans CJK SC}
-\setCJKsansfont{Noto Serif CJK SC}
-\setCJKmonofont{Noto Sans Mono CJK SC}
+\setCJKmainfont{Noto Sans CJK SC}[
+    BoldFont=Noto Sans CJK SC Bold,
+    ItalicFont=Noto Sans CJK SC,
+    BoldItalicFont=Noto Sans CJK SC Bold,
+]
+\setCJKsansfont{Noto Serif CJK SC}[
+    BoldFont=Noto Serif CJK SC Bold,
+    ItalicFont=Noto Serif CJK SC,
+    BoldItalicFont=Noto Serif CJK SC Bold,
+]
+\setCJKmonofont{Noto Sans Mono CJK SC}[
+    BoldFont=Noto Sans Mono CJK SC Bold,
+    ItalicFont=Noto Sans Mono CJK SC,
+    BoldItalicFont=Noto Sans Mono CJK SC Bold,
+]
 
 \usepackage{xunicode,xltxtra,url,parskip} % Formatting packages
 
@@ -49,9 +61,9 @@
 
 \usepackage{titlesec} % Used to customize the \section command
 \titleformat{\section}{\Large\raggedright}{}{0em}{}[\titlerule] % Text formatting of sections
-\titlespacing{\section}{0pt}{3pt}{6pt} % Spacing around sections
+\titlespacing{\section}{0pt}{2pt}{4pt} % Spacing around sections
 \titleformat{\subsection}{\large\raggedright}{ -}{0pt}{} % Text formatting of subsections
-\titlespacing{\subsection}{0pt}{0pt}{3pt} % Spacing around subsections
+\titlespacing{\subsection}{0pt}{0pt}{2pt} % Spacing around subsections
 
 \usepackage{makecell}
 \usepackage{array}
@@ -61,9 +73,9 @@
 \usepackage{fontawesome5}
 
 \usepackage{enumitem}
-\setenumerate[1]{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
-\setitemize[1]{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
-\setdescription{itemsep=3pt,partopsep=0pt,parsep=0pt,topsep=3pt}
+\setenumerate[1]{itemsep=2pt,partopsep=0pt,parsep=0pt,topsep=2pt}
+\setitemize[1]{itemsep=2pt,partopsep=0pt,parsep=0pt,topsep=2pt}
+\setdescription{itemsep=2pt,partopsep=0pt,parsep=0pt,topsep=2pt}
 
 \begin{document}
 
@@ -84,7 +96,7 @@
 
 \begin{keepsection}
 \begin{center}
-    {\LARGE Haoran Dang}（党浩然） \\
+    \textbf{{\LARGE Haoran Dang}{\large（党浩然）}} \\
     \faIcon{envelope} \  \href{mailto:danghr@outlook.com}{danghr@outlook.com} \  / \  \faIcon{desktop} \  \href{https://www.danghr.com}{danghr.com} \\
 \end{center}
 \end{keepsection}
@@ -197,7 +209,8 @@
 
 \section{CERTIFICATES \& AWARDS}
 \begin{itemize}
-    \item \textbf{2022 SIST Outstanding Thesis} {\small (for undergraduate final year project)} \hfill ShanghaiTech \quad 2022-06
+    \item \textbf{Outstanding Student} (AY 2023-2024) \hfill UCAS \quad 2024-05
+    \item \textbf{2022 SIST Outstanding Thesis} (for undergraduate final year project) \hfill ShanghaiTech \quad 2022-06
     \item \textbf{Excellent Individual of Industrial Practice in Class of 2018} \hfill ShanghaiTech \quad 2021-06
     \item \textbf{Excellent Individual of Social Practice in 2019} \hfill ShanghaiTech \quad 2019-11
 \end{itemize}
