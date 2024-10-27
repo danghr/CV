@@ -110,11 +110,11 @@
 \section{EDUCATION}
 
 \begin{itemize}
-    \item \textbf{Institute of Computing Technology, Chinese Academy of Sciences} \hfill 2022-09 \datetlide Present \\
-    M.Eng. Student in Electronic Information \quad {\small Supervisor: Prof. Dongrui Fan \quad GPA: 3.81/4} \hfill Beijing, China \\
-    {\small Also a student of University of Chinese Academy of Sciences, where the degree is to be conferred.}
+    \item \textbf{University of Chinese Academy of Sciences} \hfill 2022-09 \datetlide Present \\
+    \textbf{Institute of Computing Technology, Chinese Academy of Sciences} \hfill Beijing, China \\
+    M.Eng. Student in Computer Technology \quad {\small Supervisor: Prof. Dongrui Fan \quad GPA: 3.81/4} 
     \item \textbf{ShanghaiTech University} \hfill 2018-09 \datetlide 2022-06 \\
-    B.Eng. in Computer Science and Technology \quad {\small GPA: 3.50/4 \quad Rank in major: 55/194 (28.4\%)} \hfill Shanghai, China
+    B.Eng. in Computer Science and Technology \quad {\small GPA: 3.50/4 \quad Rank: 55/194 (28.4\%)} \hfill Shanghai, China \\
 \end{itemize}
 
 \end{keepsection}
@@ -128,11 +128,11 @@
 \section{RESEARCH \& PROJECTS}
 
 \subsection{Publications}
-    \begin{itemize}
-        \item \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' \textit{Euro-Par 2024}.
-        \item \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
+    \begin{enumerate}
+        \item \label{GDL-GNN-Paper} \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' \textit{Euro-Par 2024}.
+        \item \label{NobLSM-Paper} \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
         \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}.
-    \end{itemize}
+    \end{enumerate}
 \end{keepsection}
 
 \begin{keepsection}
@@ -142,8 +142,9 @@
     {\small Director: Assoc. Prof. Mingyu Yan} \hfill Beijing, China
     \begin{small}
         \begin{itemize}
-            \item Conducted research to accelerate GNN inference on multi-GPU platforms, developed and implemented an optimized GPU dataloading method based on partition, achieving a 59.9\% performance improvement over baseline. (cf. GDL-GNN)
-            \item Developed an undergraduate FYP on optimizing GNN training, halving training times by implementing a multithreaded data loader across various GPUs. Awarded the SIST Outstanding Thesis.
+            \item Conducting research to accelerate mini-batch inference of GNNs on GPU platforms.
+            \item Conducted research to accelerate full-graph GNN accurate inference on multi-GPU platforms, developed and implemented GDL-GNN, an optimized GPU dataloading method based on graph partition with various optimization techniques, achieving a 59.9\% performance improvement over baseline. (cf. Publication \ref{GDL-GNN-Paper})
+            \item Developed an undergraduate FYP on optimizing GNN training, halving training times by implementing a multithreaded data loader. Awarded the SIST Outstanding Thesis.
         \end{itemize}
     \end{small}
 
@@ -151,7 +152,7 @@
     {\small PI: Assist. Prof. Chundong Wang} \hfill Shanghai, China
     \begin{small}
         \begin{itemize}
-            \item Designed and implemented NobLSM's database component, using a modified ext4 interface to delay file deletions and minimize costly \texttt{sync}s. Demonstrated enhanced performance via benchmarking against SOTA LSM-trees. (cf. NobLSM)
+            \item Designed and implemented NobLSM's database component, utilizing a modified ext4 to minimize costly \texttt{sync} operations by delaying deletions of old SSTables until the corresponding compacted SSTables have been automatically flushed onto the disk. Demonstrated enhanced performance via benchmarking against SOTA LSM-trees. (cf. Publication \ref{NobLSM-Paper})
         \end{itemize}
     \end{small}
 
@@ -165,12 +166,25 @@
 \end{itemize}
 \end{keepsection}
 
-% \begin{keepsection}
-% \subsection{Projects}
-% \begin{itemize}
-%     \item \textbf{``One Student One Chip'' Project}
-% \end{itemize}
-% \end{keepsection}
+\begin{keepsection}
+\subsection{Projects}
+\begin{itemize}
+    \item \textbf{The ``One Student One Chip'' (一生一芯) Project} \hfill 2024-01 \datetlide Present
+    \begin{small}
+        \begin{itemize}
+            \item Student ID: ysyx\_24070014 \quad Learning record: \href{https://www.danghr.com/ysyx/record}{danghr.com/ysyx/record} \quad Code: \href{https://www.danghr.com/ysyx/code}{danghr.com/ysyx/code}
+            \item Software: Implemented NEMU, a RISC-V emulator for teaching purpose, supporting RV32IM instructions up to now.
+            \item Hardware: Implementing a single-cycle RISC-V CPU using Verilog.
+        \end{itemize}
+    \end{small}
+    \item \textbf{Pintos} {\small (As the course project of Operating System I in ShanghaiTech)} \hfill 2020-09 \datetlide 2021-01
+    \begin{small}
+        \begin{itemize}
+            \item Implemented a multi-threading kernel with scheduling \& thread management, user program \& system calls, virtual memory, and file system with buffer cache.
+        \end{itemize}
+    \end{small}
+\end{itemize}
+\end{keepsection}
 
 \begin{keepsection}
 \subsection{TEACHING}
@@ -189,12 +203,12 @@
 
 \section{SKILLS}
 \begin{itemize}
-    \item \textbf{Programming Languages \& Frameworks:} Familiar with C/C++ and Python. Knowledgeable in PyTorch, DGL, Verilog, Shell scripting and \LaTeX.
+    \item \textbf{Programming Languages \& Frameworks:} Familiar with C/C++ and Python. Knowledgeable in PyTorch, DGL, CUDA, Verilog, Shell scripting and \LaTeX.
     \item \textbf{Languages:} Mandarin Chinese (native), English (fluent)
         \begin{itemize}
             \item \textbf{TOEFL iBT} \quad Score: 107 {\small (Reading: 29 \, Listening: 27 \, Speaking: 23 \, Writing: 28)} \hfill 2024-04
             \item \textbf{GRE General Test} \quad Score: 328 {\small (Verbal: 158 \, Quantitative: 170 \, Analytical Writing: 4)} \hfill 2022-08
-            \item \textbf{College English Test Band 6} \quad Score: 572 {\small (Listening: 198 \, Reading: 211 \, Writing: 163)} \hfill 2021-06
+            % \item \textbf{College English Test Band 6} \quad Score: 572 {\small (Listening: 198 \, Reading: 211 \, Writing: 163)} \hfill 2021-06
         \end{itemize}
 \end{itemize}
 
@@ -226,9 +240,9 @@
 
 \section{VOLUNTARY SERVICE}
 \begin{itemize}
-    \item \textbf{20th Public Science Day of ICT, CAS} \quad {\small Remote livestream camera operator.} \hfill ICT, CAS \quad 2024-05
-    \item \textbf{``Sunflower Activity'' - Haidian Hospital Volunteers} \quad {\small Assistance in the Service Center.} \hfill ICT, CAS \quad 2023-12
-    \item \textbf{2020 Freshmen Enrollment} \quad {\small Guidance in baggage claim of postgraduate students.} \hfill ShanghaiTech \quad 2020-09
+    \item \textbf{20th Public Science Day of ICT, CAS} \quad {\small Livestream on-site camera operator.} \hfill ICT, CAS \quad 2024-05
+    \item \textbf{``Sunflower Activity'' - Haidian Hospital Volunteers} \quad {\small Assisted in the Service Center.} \hfill ICT, CAS \quad 2023-12
+    \item \textbf{2020 Freshmen Enrollment} \quad {\small Assisted in baggage claim for new graduate students.} \hfill ShanghaiTech \quad 2020-09
     \item \textbf{2020 Campus Opening Day} \quad {\small Participated in device check and exam download.} \hfill ShanghaiTech \quad 2020-07
     \item \textbf{2019 Admission Consultation} \quad {\small Participated in admission consultation in Beijing.} \hfill ShanghaiTech \quad 2019-06
 \end{itemize}

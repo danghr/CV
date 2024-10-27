@@ -110,9 +110,8 @@
 \section{教育背景}
 
 \begin{itemize}
-    \item \textbf{中国科学院计算技术研究所} \hfill 2022-09至今 \\
-    电子信息专业 \, 工程硕士在读 \quad {\small 导师：范东睿（研究员） \quad GPA：3.81/4} \hfill 中国 \, 北京 \\
-    {\small 学籍属于中国科学院大学，学历学位均由该校授予。}
+    \item \textbf{中国科学院大学 / 中国科学院计算技术研究所} \hfill 2022-09至今 \\
+    计算机技术专业 \, 工程硕士在读 \quad {\small 导师：范东睿（研究员） \quad GPA：3.81/4} \hfill 中国 \, 北京
     \item \textbf{上海科技大学} \hfill 2018-09 \datetlide 2022-06 \\
     计算机科学与技术专业 \, 工学学士 \quad {\small GPA：3.50/4 \quad 专业排名：55/194（28.4\%）} \hfill 中国 \, 上海
 \end{itemize}
@@ -128,11 +127,11 @@
 \section{科研和项目经历}
 
 \subsection{发表论文}
-    \begin{itemize}
+    \begin{enumerate}
         \item \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' \textit{Euro-Par 2024}.
         \item \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
         \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}.
-    \end{itemize}
+    \end{enumerate}
 \end{keepsection}
 
 \begin{keepsection}
@@ -142,7 +141,8 @@
     {\small 课题组长：严明玉（副研究员）} \hfill 中国 \, 北京
     \begin{small}
         \begin{itemize}
-            \item 针对多GPU平台上的GNN推理加速问题进行研究，提出并实现了一套基于分区的优化GPU数据加载方法，性能比基线提高了59.9\%。（参见GDL-GNN）
+            \item 正在进行一项在GPU平台上进行GNN小批量推理的加速研究。
+            \item 针对多GPU平台上的GNN推理加速问题进行研究，提出并实现了一套基于分区的优化GPU数据加载方法，性能比基准提高了59.9\%。（参见论文1）
             \item 完成了一项图神经网络在多GPU架构下训练加速的研究，通过多线程数据加载方法将训练时间减半。此工作获得了上科大信息学院优秀本科毕业设计奖项。
         \end{itemize}
     \end{small}
@@ -151,7 +151,7 @@
     {\small 实验室PI：王春东（助理教授、研究员）} \hfill 中国 \, 上海
     \begin{small}
         \begin{itemize}
-            \item 负责NobLSM项目中数据库部分的设计与实现，借助一版经过修改的ext4文件系统推迟旧数据的删除，以在保证数据一致性的前提下减少文件系统~\texttt{sync}~。完成该项目的性能测试工作，结果表明其性能优于SOTA LSM树数据库。（参见NobLSM）
+            \item 负责NobLSM项目中数据库部分的设计与实现，借助经过修改的ext4文件系统，在不调用文件系统~\texttt{sync}~的前提下实现Compaction操作完成且新SSTable落盘后再删除旧SSTable。完成该项目的性能测试工作。（参见论文2）
         \end{itemize}
     \end{small}
 
@@ -165,12 +165,25 @@
 \end{itemize}
 \end{keepsection}
 
-% \begin{keepsection}
-% \subsection{Projects}
-% \begin{itemize}
-%     \item \textbf{``One Student One Chip'' Project}
-% \end{itemize}
-% \end{keepsection}
+\begin{keepsection}
+    \subsection{项目经历}
+    \begin{itemize}
+        \item \textbf{``一生一芯''} \hfill 2024-01至今
+        \begin{small}
+            \begin{itemize}
+                \item 学号：ysyx\_24070014 \quad 学习记录：\href{https://www.danghr.com/ysyx/record}{danghr.com/ysyx/record} \quad 代码：\href{https://www.danghr.com/ysyx/code}{danghr.com/ysyx/code}
+                \item 软件：实现了NEMU，这是一款用于教学的RISC-V模拟器，目前支持RV32IM指令集。
+                \item 硬件：正在使用Verilog实现单周期RISC-V CPU。
+            \end{itemize}
+        \end{small}
+        \item \textbf{Pintos} {\small （上海科技大学操作系统I课程项目）} \hfill 2020-09 \datetlide 2021-01
+    \begin{small}
+        \begin{itemize}
+            \item 实现了一个多线程操作系统内核，支持线程管理、用户程序和系统调用、虚拟内存，以及带有缓冲区缓存的文件系统。
+        \end{itemize}
+    \end{small}
+    \end{itemize}
+    \end{keepsection}
 
 \begin{keepsection}
 \subsection{教学经历}
