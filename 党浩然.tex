@@ -128,9 +128,9 @@
 
 \subsection{发表论文}
     \begin{enumerate}
-        \item \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' \textit{Euro-Par 2024}.
-        \item \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
-        \item D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}.
+        \item \label{GDL-GNN-Paper} \underline{H Dang}, M Wu, M Yan, X Ye, and D Fan, ``\textbf{GDL-GNN: Applying GPU Dataloading of Large Datasets for Graph Neural Network Inference},'' \textit{Euro-Par 2024}.
+        \item \label{NobLSM-Paper} \underline{H Dang}, C Ye, Y Hu, and C Wang, ``\textbf{NobLSM: An LSM-tree with Non-blocking Writes for SSDs},'' \textit{DAC 2022}.
+        \item \label{TrEnDSE-Paper} D Wang, M Yan, Y Teng, D Han, \underline{H Dang}, X Ye, and D Fan, ``\textbf{A Transfer Learning Framework for High-accurate Cross-workload Design Space Exploration of CPU},'' \textit{ICCAD 2023}.
     \end{enumerate}
 \end{keepsection}
 
@@ -142,8 +142,8 @@
     \begin{small}
         \begin{itemize}
             \item 正在进行一项在GPU平台上进行GNN小批量推理的加速研究。
-            \item 针对多GPU平台上的GNN推理加速问题进行研究，提出并实现了一套基于分区的优化GPU数据加载方法，性能比基准提高了59.9\%。（参见论文1）
-            \item 完成了一项图神经网络在多GPU架构下训练加速的研究，通过多线程数据加载方法将训练时间减半。此工作获得了上科大信息学院优秀本科毕业设计奖项。
+            \item 针对多GPU平台上的GNN推理加速问题进行研究，提出并实现了一套基于图划分的优化GPU数据加载方法，最小化对GPU显存以外数据的访问，性能比基准提高了59.9\%。（参见论文~\ref{GDL-GNN-Paper}）
+            \item 完成了一项图神经网络在多GPU架构下训练加速的研究，通过多线程数据加载将训练时间减半。此工作获得了上科大信息学院优秀本科毕业设计奖项。
         \end{itemize}
     \end{small}
 
@@ -151,7 +151,7 @@
     {\small 实验室PI：王春东（助理教授、研究员）} \hfill 中国 \, 上海
     \begin{small}
         \begin{itemize}
-            \item 负责NobLSM项目中数据库部分的设计与实现，借助经过修改的ext4文件系统，在不调用文件系统~\texttt{sync}~的前提下实现Compaction操作完成且新SSTable落盘后再删除旧SSTable。完成该项目的性能测试工作。（参见论文2）
+            \item 负责NobLSM项目中数据库部分的设计与实现，借助经过修改的ext4文件系统，在不调用文件系统~\texttt{sync}~的前提下实现Compaction操作完成且新SSTable落盘后再删除旧SSTable。完成该项目的性能测试工作。（参见论文~\ref{NobLSM-Paper}）
         \end{itemize}
     \end{small}
 
